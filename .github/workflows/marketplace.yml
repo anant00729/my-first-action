@@ -3,15 +3,13 @@ name: Python Application
 on: push
 
 jobs: 
-  job1: 
-    name: Python code checker Job 
-    build:
-      runs-on: ubuntu-latest
-      steps: 
-      - name: Check out the code
-        uses: actions/checkout@v4
-      - name: Python Syntax Checker
-        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Check out the code
+      uses: actions/checkout@v4
+    - name: Python Syntax Checker
+      uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
 
 
 # name: Python application
