@@ -1,15 +1,36 @@
-name: Python Application 
+# name: Python Application 
 
-on: [push]
+# on: push
 
+# jobs: 
+#   job1: 
+#     name: Python code checker Job 
+#     build:
+#       runs-on: unbuntu-latest
+#       steps: 
+#       - name: Check out the code
+#         uses: actions/checkout@v4
+#       - name: Python Syntax Checker
+#         uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+
+name: first
+on: push
 jobs: 
-  build:
-    runs-on: unbuntu-latest
+  job1: 
+    name: First Job 
+    runs-on: ubuntu-latest
     steps: 
-    - name: Check out the code
-      uses: actions/checkout@v4
-    - name: Python Syntax Checker
-      uses: cclauss/Find-Python-syntax-errors-action@v0.2.0      
-  
+    - name: Step one
+      uses: actions/checkout@v3
+    - name: Step two
+      run: env | sort 
 
+  job2: 
+    name: Second Job
+    runs-on: windows-latest
+    steps: 
+    - name: Step one
+      uses: actions/checkout@v3
+    - name: Step two
+      run: "Get-ChildItem Env: | Sort-Object Name"
 
