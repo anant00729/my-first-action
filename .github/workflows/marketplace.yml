@@ -1,0 +1,14 @@
+name: Python Application 
+
+on: [push]
+
+jobs: 
+  build:
+    runs-on: unbuntu-latest
+
+    steps: 
+      - name: Check out the code
+        uses: actions/checkout@v4
+  
+
+
